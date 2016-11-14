@@ -65,7 +65,7 @@ DIR=${TARGET:='.'}
 # may be empty ""
 ALTHOSTNAMES=${HOSTLIST}
 ALTADDRESSES=${IPLIST}
-CA_ORG='/O=OwnTracks.org/OU=generate-CA/emailAddress=nobody@example.net'
+CA_ORG='/O=ionsmart.co/OU=generate-CA/emailAddress=agus@ionsmart.co'
 CA_DN="/CN=An MQTT broker${CA_ORG}"
 CACERT=${DIR}/ca
 SERVER="${DIR}/${host}"
@@ -194,7 +194,7 @@ if [ $kind == 'server' ]; then
 		%%% 
 		%%% [notice]
 		%%% explicitText            = "This CA is for a local MQTT broker installation only"
-		%%% organization            = "OwnTracks"
+		%%% organization            = "IonSmart"
 		%%% noticeNumbers           = 1
 
 !ENDconfig
@@ -240,7 +240,7 @@ else
 		%%% output_password		= secret
 		%%% 
 		%%% [ req_distinguished_name ]
-		%%% # O                       = OwnTracks
+		%%% # O                       = IonSmart
 		%%% # OU                      = MQTT
 		%%% # CN                      = Suzie Smith
 		%%% CN                        = $CLIENT
